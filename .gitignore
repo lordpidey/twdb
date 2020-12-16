@@ -5,4 +5,6 @@
 !/worker
 !/worker/main.js
 !/worker/package.json
-!wrangler-example.toml
+!/wrangler-example.toml
+!/readme.md
+!/license.md
