@@ -1,0 +1,8 @@
+*
+!/.gitignore
+!/public
+!/public/**
+!/worker
+!/worker/main.js
+!/worker/package.json
+!wrangler-example.toml

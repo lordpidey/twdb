@@ -1,0 +1,8 @@
+name = "twdb"
+type = "webpack"
+route = "https://domain.example/*"
+kv_namespaces = [{binding = "twdb", id = "XXX"}]
+
+[site]
+bucket = "public"
+entry-point = "worker"

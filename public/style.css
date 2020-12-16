@@ -1,0 +1,172 @@
+* { box-sizing: border-box; }
+
+body
+{
+	font-size: 16px;
+	margin: 2em 0;
+	font-family: "DejaVu Sans", sans-serif;
+	color: #333;
+	background: #FAFAFA;
+}
+
+main { margin: 0 2em; }
+
+#media
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2em;
+	justify-content: space-evenly;
+}
+
+#media > a
+{
+	border-radius: 0.5em;
+	transition: 0.5s ease background-color;
+	background: #DFB;
+	padding: 0.5em;
+	max-width: 100%;
+}
+
+#media > a:hover,
+#media > a:focus
+{
+	background: #FBD;
+}
+
+#media > a > :not(.info)
+{
+	height: 16em;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	object-fit: contain;
+}
+
+#media .info
+{
+	display: flex;
+	justify-content: space-evenly;
+	margin: 0.5em 0 1em;
+	gap: 0.5em;
+	text-align: center;
+}
+
+p { margin: 2em 0; }
+
+button
+{
+	appearance: none;
+	background: #DFB;
+	border: none;
+	border-radius: 256em;
+	cursor: pointer;
+	transition: 0.5s ease background-color;
+	padding: 1em 2em;
+	font: inherit;
+}
+
+button:hover,
+button:focus
+{
+	background: #FBD;
+}
+
+h1
+{
+	font-size: 2em;
+	font-weight: normal;
+	text-align: center;
+	margin: 1em 0;
+}
+
+body > ul
+{
+	display: flex;
+	justify-content: space-around;
+	margin: 0;
+	background: #DFB;
+	padding: 0 4em;
+	flex-wrap: wrap;
+}
+
+body > ul > li
+{
+	display: block;
+	height: 100%;
+}
+
+a
+{
+	color: inherit;
+	text-decoration: none;
+}
+
+body > ul > li > a
+{
+	padding: 1em 2em;
+	height: 100%;
+	font-weight: bold;
+	display: block;
+	transition: 0.5s ease background-color;
+}
+
+body > ul > li > a:hover,
+body > ul > li > a:focus
+{
+	background: #FBD;
+}
+
+#filter
+{
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+	margin: 2em 0;
+}
+
+#filter > p
+{
+	display: flex;
+	gap: 1em;
+	align-items: baseline;
+	justify-content: center;
+	margin: 0;
+}
+
+#filter .error { font-weight: bold; }
+
+#filter label { display: contents; }
+
+#filter input { max-width: 30%; }
+
+input
+{
+	appearance: none;
+	background: #FAFAFA;
+	border: 0.5em solid #DFB;
+	padding: 0.5em 1em;
+	border-radius: 256em;
+	font: inherit;
+	color: inherit;
+	transition: 0.5s ease border-color;
+}
+
+input:focus
+{
+	border-color: #FBD;
+	transition: 0.25s ease border-color;
+}
+
+::selection
+{
+	background: #BDF;
+}
+
+noscript
+{
+	display: block;
+	margin: 0 2em;
+	text-align: center;
+	font-weight: bold;
+}
