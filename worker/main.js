@@ -13,7 +13,7 @@ let route = async event =>
 	let {request} = event
 	
 	if (request.method !== "GET" && request.method !== "HEAD")
-		return new Response("improper method", {status: 400})
+		return new Response("improper method", {status: 405})
 	
 	let {pathname} = new URL(request.url)
 	
@@ -36,7 +36,7 @@ let route = async event =>
 	
 	if (match = pathname.match(/^\/th([0-9]+\.mp4)$/))
 	if (await twdb.get(match[1], "stream"))
-		return new Response("", {status: 303, headers: {"location": "/" + match[1]}})
+		return new Response("", {status: 307, headers: {"location": "/" + match[1]}})
 	
 	return new Response("not found", {status: 404})
 }
@@ -46,7 +46,7 @@ let mime = type =>
 	if (type === "png") return "image/png"
 	if (type === "jpeg") return "image/jpeg"
 	if (type === "mp4") return "video/mp4"
-	throw new Error()
+	throw new Error("Illegal mime type, " + type);
 }
 
 addEventListener("fetch", event => event.respondWith(respond(event)))
